@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title":"MDS 3.0 Builder - 2021",
+    "obra":"OBRA Assessments",
+    "pps_interim": "PPS/Interim Payment Assessments",
+    "entry_discharge":"Entry and Discharge Records",
+    "assessments": {
+      "labels": {
+        "admission":"Admission",
+        "admission_co":"Correction of Admission",
+        "admission_ia":"Inactivation of Admission",
+        "quarterly":"Quarterly",
+        "quarterly_co":"Correction of Quarterly",
+        "quarterly_ia":"Inactivation of Quarterly",
+        "annual":"Annual",
+        "annual_co":"Correction of Annual",
+        "annual_ia":"Inactivation of Annual",
+        "change_in_status":"Change In Status",
+        "change_in_status_co":"Correction of Change In Status",
+        "change_in_status_ia":"Inactivation of Change In Status"
+      },
+      "nc":{
+        "itm_sbst": "ITM_SBST_CD",
+        "state":"STATE_CD",
+        "fac_id":"FAC_ID",
+        "a0050":"A0050. Type of Record",
+        "a0100":"A0100. Facility Provider Numbers",
+        "a0200":"A0200. Type of Provider",
+        "a0300":"A0300. Optional State Assessments <br>Complete only if A0200 = 1"
+      }
+    }
+  }
+}

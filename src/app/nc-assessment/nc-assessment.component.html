@@ -1,0 +1,18 @@
+<div class="nc-form-template">
+
+  <form [formGroup]="ncForm">
+
+    <label for="itmSbstCd">ITM_SBST_CODE</label>
+    <select formControlName="itmSbstCd" class="form-control">
+      <option *ngFor="let a of AssessmentType" [selected]="a.value === assessmentType">{{a.label}}</option> 
+    </select>
+    <br><br>
+
+    <label for="stateCd">STATE_CD</label>
+    <input type="text" formControlName="stateCd" class="form-control" value="CO">
+    <br><br>
+
+    <label for="facId">FAC_ID</label>
+    <input type="text" formControlName="facId" class="form-control" value="whisper">
+  </form>
+</div>

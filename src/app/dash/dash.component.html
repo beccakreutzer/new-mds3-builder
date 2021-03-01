@@ -1,0 +1,84 @@
+<div class="assessment-accordion">
+  <div class="container">
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h1 translate class="center-header">
+              app.obra
+            </h1>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-grid-list cols="6" rowHeight="50px">
+          <mat-grid-tile></mat-grid-tile>
+
+          <mat-grid-tile>
+            <button class="menu-button" mat-raised-button [matMenuTriggerFor]="menu1" >{{'app.assessments.labels.admission' | translate}}</button>
+            <mat-menu #menu1="matMenu">
+              <button mat-menu-item
+                *ngFor="let a of admissionItems">
+                <a translate [routerLink]="[a.route]" routerLinkActive="active">{{ a.label }}</a>
+              </button>
+            </mat-menu>
+          </mat-grid-tile>
+
+          <mat-grid-tile>
+            <button class="menu-button" mat-raised-button [matMenuTriggerFor]="menu2" >{{'app.assessments.labels.quarterly' | translate}}</button>
+            <mat-menu #menu2="matMenu">
+              <button mat-menu-item
+                *ngFor="let q of quarterlyItems">
+                <a translate [routerLink]="[q.route]" routerLinkActive="active">{{ q.label }}</a>
+              </button>
+            </mat-menu>
+          </mat-grid-tile>
+
+          <mat-grid-tile>
+            <button class="menu-button" mat-raised-button [matMenuTriggerFor]="menu3" >{{'app.assessments.labels.annual' | translate}}</button>
+            <mat-menu #menu3="matMenu">
+              <button mat-menu-item
+                *ngFor="let an of annualItems">
+                <a translate [routerLink]="[an.route]" routerLinkActive="active">{{ an.label }}</a>
+              </button>
+            </mat-menu>
+          </mat-grid-tile>
+
+          <mat-grid-tile>
+            <button class="menu-button" mat-raised-button [matMenuTriggerFor]="menu4" >{{'app.assessments.labels.change_in_status' | translate}}</button>
+            <mat-menu #menu4="matMenu">
+              <button mat-menu-item
+                *ngFor="let c of changeItems">
+                <a translate [routerLink]="[c.route]" routerLinkActive="active">{{ c.label }}</a>
+              </button>
+            </mat-menu>
+          </mat-grid-tile>
+          <mat-grid-tile></mat-grid-tile>
+        </mat-grid-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h1 translate class="center-header">
+              app.pps_interim
+            </h1>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h1 translate class="center-header">
+              app.entry_discharge
+            </h1>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
