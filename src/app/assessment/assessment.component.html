@@ -1,0 +1,23 @@
+<button mat-raised-button color="primary" (click)="download()">Primary</button>
+
+<div class="nc-form-template">
+
+  <form [formGroup]="assessment">
+
+    <label for="itm_sbst_cd">ITM_SBST_CODE</label>
+    <select formControlName="itm_sbst_cd" class="form-control" id="itm_sbst_cd">
+      <option *ngFor="let type of options.assessmentType" value="{{type.key}}">{{type.label}}</option> 
+    </select>
+    <br><br>
+
+    <label for="state_cd">STATE_CD</label>
+    <input type="text" formControlName="state_cd" class="form-control" value="CO" id="state_cd">
+    <br><br>
+
+    <label for="fac_id">FAC_ID</label>
+    <input type="text" formControlName="fac_id" class="form-control" value="whisper" id="fac_id">
+
+    <app-section-a-form formControlName="sectionA"></app-section-a-form>
+    
+  </form>
+</div>

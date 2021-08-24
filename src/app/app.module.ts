@@ -7,10 +7,11 @@ import { HttpClient, HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { XmlService } from './services/xml.service';
 
 // App components //
 import { DashComponent } from './dash/dash.component';
-import { NcAssessmentComponent } from './nc-assessment/nc-assessment.component';
+import { AssessmentComponent } from './assessment/assessment.component';
 import { RecordInfoComponent } from './record-info/record-info.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 
@@ -21,14 +22,18 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { SectionAFormComponent } from './assessment/section-a-form/section-a-form.component';
+
+declare var require: any;
 
 @NgModule({
   declarations: [
     AppComponent,
+    AssessmentComponent,
     DashComponent,
-    NcAssessmentComponent,
     RecordInfoComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    SectionAFormComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -50,7 +55,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
         }
     })
   ],
-  providers: [],
+  providers: [XmlService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
